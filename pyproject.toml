@@ -7,10 +7,15 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-pandas = "2.2.2"
 jupyterlab = "4.2.3"
 scikit-learn = "1.5.1"
 xgboost = "^2.1.1"
+matplotlib = "^3.9.2"
+pystan = "^3.10.0"
+ephem = "^4.1.5"
+holidays = "^0.57"
+prophet = "^1.1.5"
+pandas = "2.2.2"
 
 
 [build-system]
