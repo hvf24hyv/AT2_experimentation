@@ -4,57 +4,55 @@
     <img src="https://img.shields.io/badge/CCDS-Project%20template-328F97?logo=cookiecutter" />
 </a>
 
-A short description of the project.
+This project involves building machine learning models to forecast total sales revenue and predict item-level sales at specific stores. The project structure follows the Cookiecutter Data Science template, with models and notebooks categorized into predictive and forecasting subfolders for clarity and organization.
 
 ## Project Organization
 
 ```
-├── LICENSE            <- Open-source license if one is chosen
-├── Makefile           <- Makefile with convenience commands like `make data` or `make train`
-├── README.md          <- The top-level README for developers using this project.
+├── README.md          <- Instructions and project overview for developers
+├── Makefile           <- Makefile for commands like `make data` or `make train`
+│
 ├── data
-│   ├── external       <- Data from third party sources.
-│   ├── interim        <- Intermediate data that has been transformed.
-│   ├── processed      <- The final, canonical data sets for modeling.
-│   └── raw            <- The original, immutable data dump.
+│   ├── external       <- Data from third-party sources
+│   ├── interim        <- Intermediate transformed data
+│   ├── processed      <- Final datasets used for modeling
+│   └── raw            <- Original, unaltered data dumps
 │
-├── docs               <- A default mkdocs project; see www.mkdocs.org for details
+├── docs               <- Documentation for the project (e.g., mkdocs)
 │
-├── models             <- Trained and serialized models, model predictions, or model summaries
+├── models             <- Trained models and model artifacts
+│   ├── predictive     <- Models related to item-level sales prediction
+│   └── forecasting    <- Models related to total sales forecasting
 │
-├── notebooks          <- Jupyter notebooks. Naming convention is a number (for ordering),
-│                         the creator's initials, and a short `-` delimited description, e.g.
-│                         `1.0-jqp-initial-data-exploration`.
+├── notebooks          <- Jupyter notebooks for experiments and exploration
+│   ├── predictive     <- Notebooks for item-level predictions
+│   └── forecasting    <- Notebooks for total sales forecasts
+│                         Naming: <lastname>_<firstname>-<student_id>-<model_type>_<description>.ipynb
 │
-├── pyproject.toml     <- Project configuration file with package metadata for 
-│                         at2_experimentation and configuration for tools like black
+├── pyproject.toml     <- Project configuration file (e.g., Poetry for package management)
 │
-├── references         <- Data dictionaries, manuals, and all other explanatory materials.
+├── references         <- Manuals, data dictionaries, and related resources
 │
-├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
-│   └── figures        <- Generated graphics and figures to be used in reporting
+├── reports            <- Generated analysis reports and visualizations and final report
+│   └── figures        <- Generated graphics and figures
 │
-├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-│                         generated with `pip freeze > requirements.txt`
+├── requirements.txt   <- File listing required Python packages for the project
 │
-├── setup.cfg          <- Configuration file for flake8
+├── setup.cfg          <- Configuration file for code style tools like flake8
 │
-└── at2_experimentation   <- Source code for use in this project.
-    │
+├── github.txt         <- Link to the GitHub repository for experimentation phase
+│
+└── at2_experimentation   <- Source code for the project
     ├── __init__.py             <- Makes at2_experimentation a Python module
-    │
-    ├── config.py               <- Store useful variables and configuration
-    │
-    ├── dataset.py              <- Scripts to download or generate data
-    │
-    ├── features.py             <- Code to create features for modeling
-    │
+    ├── config.py               <- Configuration variables and settings
+    ├── dataset.py              <- Scripts to load, preprocess, and manage data
+    ├── features.py             <- Code to create features for the models
     ├── modeling                
-    │   ├── __init__.py 
-    │   ├── predict.py          <- Code to run model inference with trained models          
-    │   └── train.py            <- Code to train models
-    │
-    └── plots.py                <- Code to create visualizations
+    │   ├── __init__.py         
+    │   ├── predict.py          <- Scripts for model inference
+    │   └── train.py            <- Scripts for training the models
+    └── plots.py                <- Functions to create visualizations
+
 ```
 
 --------
